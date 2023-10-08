@@ -1,4 +1,8 @@
-html,
+html {
+
+  background-color: #ffffff;
+}
+
 body {
   height: 100%;
   scroll-behavior: smooth;
@@ -70,17 +74,21 @@ main.main {
 .menu-label.nav-header {
   cursor: default;
   background: none !important;
-  border-bottom: 2px solid var(--primary-color);
+  border-bottom: 2px solid #d3d2ad;
   font-size: 0.75em;
   letter-spacing: 0.1em;
   color: white !important;
   padding: 8px;
   border-radius: 4px;
   margin: 0 10px;
+
 }
+
+
 
 .menu-list a {
   padding: 0.25em 1.5em !important;
+  color: black !important;
 }
 
 .menu-list a:hover {
@@ -108,7 +116,7 @@ main.main {
 }
 
 .navigation {
-  background-color: #060606;
+  background-color: #ffffff;
   width: 250px;
 }
 
@@ -124,8 +132,18 @@ main.main {
   cursor: pointer;
 }
 
+.nav-toggle-button {
+  display: flex;
+  align-items: center; /* vertically center the content */
+  justify-content: center; /* horizontally center the content */
+  border: none;  /* remove border */
+  background: transparent;  /* make background transparent */
+  padding: 5;  /* remove padding */
+  outline: none;  /* remove focus outline */
+}
+
 #nav-menu {
-  background-color: #060606;
+  background-color: #ffffff;
 }
 
 .nav-item.disabled {
@@ -148,6 +166,12 @@ main.main {
   margin-top: 62px;
 }
 
+.tabs.nav ul {
+  list-style-type: none;  /* remove bullet points */
+  margin: 0;
+  padding: 0;
+}
+
 .nav.tabs {
   position: fixed;
   width: 100%;
@@ -155,7 +179,7 @@ main.main {
   display: block !important;
   margin-bottom: 0 !important;
   padding: 10px 10px 0 10px;
-  background-color: #111;
+  background-color: white;
 }
 
 .nav.tabs a {

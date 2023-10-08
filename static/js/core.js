@@ -47,6 +47,7 @@ function alpineCore() {
                 restRequest('GET', null, (data) => { this.setTabContent({ name: tabName, contentID: `tab-${tabName}`, address: address }, data); }, address);
                 return;
             }
+            
 
             // If tab is already open, jump to it
             const existingTabIndex = this.openTabs.findIndex((tab) => tab.name === tabName);
@@ -68,6 +69,8 @@ function alpineCore() {
                 toast('Unable to load page', false);
                 console.error(error);
             }
+
+
         },
 
         checkQueryString(queryString) {

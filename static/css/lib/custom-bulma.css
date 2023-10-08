@@ -5846,7 +5846,10 @@ label.panel-block:hover {
 .tabs.is-boxed a {
   border: 1px solid transparent;
   border-radius: 4px 4px 0 0;
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
 }
+
 .tabs.is-boxed a:hover {
   background-color: var(--primary-color);
   border-bottom-color: var(--primary-color);

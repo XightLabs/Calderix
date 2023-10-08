@@ -299,7 +299,7 @@
                                                         <select x-model="executor.name">
                                                             <option default disabled>Select an executor...</option>
                                                             <template x-for="exec of getExecutors(executor.platform, executor.name)" :key="exec">
-                                                                <option x-bind:value="exec" x-text="exec""></option>
+                                                                <option x-bind:value="exec" x-text="exec"></option>
                                                             </template>
                                                         </select>
                                                     </div>
