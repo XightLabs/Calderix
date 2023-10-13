@@ -284,7 +284,7 @@ th:not([align]) {
 }
 
 html {
-  background-color: #060606;
+  background-color: #ffffff;
   font-size: 16px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -322,7 +322,7 @@ pre {
 }
 
 body {
-  color: white;
+  color: rgb(0, 0, 0);
   font-size: 1em;
   font-weight: 400;
   line-height: 1.5;
@@ -376,7 +376,7 @@ span {
 }
 
 strong {
-  color: #fff;
+  color: #000000;
   font-weight: 700;
 }
 
@@ -1602,7 +1602,7 @@ a.box:active {
 .content h4,
 .content h5,
 .content h6 {
-  color: #fff;
+  color: #000000;
   font-weight: 600;
   line-height: 1.125;
 }
@@ -2673,10 +2673,10 @@ a.tag:hover {
 
 /* Bulma Form */
 .select select, .textarea, .input {
-  background-color: #262626;
+  background-color: #ffffff;
   border-color: #363636;
   border-radius: 4px;
-  color: #fff;
+  color: #454545;
 }
 .select select::-moz-placeholder, .textarea::-moz-placeholder, .input::-moz-placeholder {
   color: rgba(255, 255, 255, 0.3);
@@ -3420,7 +3420,7 @@ a.tag:hover {
 }
 
 .label {
-  color: #fff;
+  color: #000;
   display: block;
   font-size: 1rem;
   font-weight: 700;
@@ -3784,7 +3784,7 @@ a.tag:hover {
   background-color: white;
   border-radius: 0.25rem;
   box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02);
-  color: white;
+  color: black;
   max-width: 100%;
   position: relative;
 }
