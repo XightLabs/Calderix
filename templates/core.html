@@ -49,10 +49,10 @@
                     <aside id="nav-menu" class="menu">
                         <p class="menu-label nav-header"><em class="fas fa-flag pr-2"></em>Campaigns</p>
                         <ul class="menu-list">
-                            <li><a href="#home" class="nav-item" x-on:click="addTab('agents', '/campaign/agents')">agents</a></li>
-                            <li><a href="#home" class="nav-item" x-on:click="addTab('abilities', '/campaign/abilities')">abilities</a></li>
+                            <li><a href="#home" class="nav-item" x-on:click="addTab('agent', '/campaign/agents')">Agents</a></li>
+                            <li><a href="#home" class="nav-item" x-on:click="addTab('abilities', '/campaign/abilities')">Abilities</a></li>
                             <li><a href="#home" class="nav-item" x-on:click="addTab('adversaries', '/campaign/adversaries')">{{ team_name }}</a></li>
-                            <li><a href="#home" class="nav-item" x-on:click="addTab('operations', '/campaign/operations')">operations</a></li>
+                            <li><a href="#home" class="nav-item" x-on:click="addTab('operations', '/campaign/operations')">Operations</a></li>
                         </ul>
                         <p class="menu-label nav-header"><em class="fas fa-puzzle-piece pr-2"></em>Plugins</p>
                         <ul class="menu-list">
@@ -69,13 +69,13 @@
                         </ul>
                         <p class="menu-label nav-header"><em class="fas fa-cog pr-2"></em></em>Configuration</p>
                         <ul class="menu-list">
-                            <li><a href="#home" class="nav-item" x-on:click="addTab('fact sources', '/advanced/sources')">fact sources</a></li>
-                            <li><a href="#home" class="nav-item" x-on:click="addTab('objectives', '/advanced/objectives')">objectives</a></li>
-                            <li><a href="#home" class="nav-item" x-on:click="addTab('planners', '/advanced/planners')">planners</a></li>
-                            <li><a href="#home" class="nav-item" x-on:click="addTab('contacts', '/advanced/contacts')">contacts</a></li>
-                            <li><a href="#home" class="nav-item" x-on:click="addTab('obfuscators', '/advanced/obfuscators')">obfuscators</a></li>
-                            <li><a href="#home" class="nav-item" x-on:click="addTab('configuration', '/advanced/configurations')">configuration</a></li>
-                            <li><a href="#home" class="nav-item" x-on:click="addTab('exfilled files', '/advanced/exfills')">exfilled files</a></li>
+                            <li><a href="#home" class="nav-item" x-on:click="addTab('fact sources', '/advanced/sources')">Fact sources</a></li>
+                            <li><a href="#home" class="nav-item" x-on:click="addTab('objectives', '/advanced/objectives')">Objectives</a></li>
+                            <li><a href="#home" class="nav-item" x-on:click="addTab('planners', '/advanced/planners')">Planners</a></li>
+                            <li><a href="#home" class="nav-item" x-on:click="addTab('contacts', '/advanced/contacts')">Contacts</a></li>
+                            <li><a href="#home" class="nav-item" x-on:click="addTab('obfuscators', '/advanced/obfuscators')">Obfuscators</a></li>
+                            <li><a href="#home" class="nav-item" x-on:click="addTab('configuration', '/advanced/configurations')">Configuration</a></li>
+                            <li><a href="#home" class="nav-item" x-on:click="addTab('exfilled files', '/advanced/exfills')">Exfilled files</a></li>
                             <li><a href="./api/docs" target="_blank">
                                 api docs
                                 <sup><em class="fas fa-external-link-alt pl-1 is-size-7"></em></sup></a>
@@ -97,18 +97,20 @@
                 <div class="tabs nav is-boxed" style="padding-right: 260px;">
                     <ul style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
                         
-                        <!-- Tabs on the left -->
-                        <template x-for="(tab, index) in openTabs" :key="index">
-                            <li x-bind:class="{ 'is-active' : activeTabIndex === index }" style="flex-grow: 1;">
-                                <a x-on:click="activeTabIndex = index">
-                                    <span x-text="tab.name"></span>
-                                    <span class="icon is-small tab-delete" x-on:click.stop="deleteTab(index, tab.contentID)">
-                                        <em class="fas fa-sm fa-times"></em>
-                                    </span>
-                                </a>
-                            </li>
-                        </template>
-                        
+                        <!-- Container for Tabs on the left -->
+                        <div class="tabs-container" style="display: flex; flex-grow: 1;">
+                            <template x-for="(tab, index) in openTabs" :key="index">
+                                <li x-bind:class="{ 'is-active' : activeTabIndex === index }">
+                                    <a x-on:click="activeTabIndex = index">
+                                        <span x-text="tab.name"></span>
+                                        <span class="icon is-small tab-delete" x-on:click.stop="deleteTab(index, tab.contentID)">
+                                            <em class="fas fa-sm fa-times"></em>
+                                        </span>
+                                    </a>
+                                </li>
+                            </template>
+                        </div>
+                
                         <!-- User name on the right -->
                         <li class="is-flex is-justify-content-flex-end" style="flex-shrink: 0;">
                             <span class="tag is-primary is-small is-rounded mb-2 p-4 user-badge">
@@ -119,17 +121,18 @@
                 </div>
                 
                 
+                
 
                 <div id="active-tab-display" class="container content"></div>
 
-                <div id="no-open-tabs" x-show="openTabs.length === 0">
+                <!-- <div id="no-open-tabs" x-show="openTabs.length === 0">
                     <p>
                         Select a tab on the left to get started
                     </p>
                     <p>
                         <a href="docs/Getting-started.html" target="blank">Getting Started Guide</a>
                     </p>
-                </div>
+                </div> -->
             </div>
 
             <div x-bind:class="{ 'is-active': showErrors }" class="modal">
@@ -170,7 +173,7 @@
                 </div>
             </div>
 
-            <div x-bind:class="{ 'is-active': isFirstVisit }" class="modal">
+            <!-- <div x-bind:class="{ 'is-active': isFirstVisit }" class="modal">
                 <div class="modal-background" @click="isFirstVisit = false"></div>
                 <div class="modal-card">
                     <div>
@@ -216,7 +219,7 @@
                         <button class="button fancy-button is-small is-fullwidth" @click="isFirstVisit = false">🚀 Get started</button>
                     </footer>
                 </div>
-            </div>
+            </div> -->
         </main>
 
         <script>

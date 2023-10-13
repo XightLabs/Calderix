@@ -119,6 +119,11 @@ main.main {
 .navigation {
   background-color: #ffffff;
   width: 250px;
+  border-right: 1px solid #e0e0e0;
+}
+
+.tabs.nav {
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .nav-logo {
@@ -190,6 +195,7 @@ main.main {
 .nav.tabs.is-boxed a {
   border-radius: 4px !important;
   margin-right: 4px;
+  display: none;
 }
 
 .nav.tabs ul {
