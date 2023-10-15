@@ -2673,7 +2673,7 @@ a.tag:hover {
 
 /* Bulma Form */
 .select select, .textarea, .input {
-  background-color: #ffffff;
+  background-color: #e9e6e6;
   border-color: #363636;
   border-radius: 4px;
   color: #454545;
@@ -2691,7 +2691,7 @@ a.tag:hover {
   color: rgba(255, 255, 255, 0.3);
 }
 .select select:hover, .textarea:hover, .input:hover, .select select.is-hovered, .is-hovered.textarea, .is-hovered.input {
-  border-color: #b5b5b5;
+  border-color: #dfc5f0;
 }
 .select select:focus, .textarea:focus, .input:focus, .select select.is-focused, .is-focused.textarea, .is-focused.input, .select select:active, .textarea:active, .input:active, .select select.is-active, .is-active.textarea, .is-active.input {
   border-color: var(--primary-color);
@@ -2844,7 +2844,7 @@ a.tag:hover {
   cursor: pointer;
 }
 .radio:hover, .checkbox:hover {
-  color: #fff;
+  color: #af7bd1;
 }
 [disabled].radio, [disabled].checkbox, fieldset[disabled] .radio, fieldset[disabled] .checkbox,
 .radio input[disabled],
